@@ -1,0 +1,55 @@
+name: Tool proposal
+description: Propose a new developer tool module
+title: "tool: "
+labels: ["tool-proposal", "triage"]
+body:
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool name
+      placeholder: JSON Diff
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - formatters
+        - generators
+        - encoders
+        - security
+        - text
+        - data
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Who benefits and what job does this tool do?
+    validations:
+      required: true
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Privacy & local processing
+      description: Confirm the tool can run fully in the browser and note any caveats.
+    validations:
+      required: true
+  - type: textarea
+    id: mvp
+    attributes:
+      label: MVP scope
+      description: Smallest useful feature set for a first PR.
+    validations:
+      required: true
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Contribution readiness
+      options:
+        - label: I read docs/adding-a-tool.md
+        - label: I can open a PR that includes lib tests
+        - label: I am okay iterating on UX with maintainers

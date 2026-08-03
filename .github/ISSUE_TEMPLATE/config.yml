@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/HarolTorrado73/DevToolkit/blob/main/docs/architecture.md
+    about: Read the architecture and contribution docs before opening an issue.
