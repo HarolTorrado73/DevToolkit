@@ -2,14 +2,31 @@
 
 Free, fast, and modern developer tools that run entirely in your browser.
 
-> **EN** · Privacy by default. Open source (MIT). Built with Next.js.  
-> **ES** · Privacidad por defecto. Código abierto (MIT). Construido con Next.js.
+[![CI](https://github.com/HarolTorrado73/DevToolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/HarolTorrado73/DevToolkit/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-## Status
+> **EN** · Privacy by default. Open source. Built to scale for years.  
+> **ES** · Privacidad por defecto. Código abierto. Diseñado para crecer durante años.
 
-Phase 0 foundation is in progress. The application shell, tool registry, CI, and documentation are being established before the first tools ship.
+---
 
-## Quick start
+## English
+
+### Why DevToolkit?
+
+DevToolkit is a curated collection of everyday developer utilities with a product-quality shell:
+
+- **Local-first** — tools are designed to process data in the browser
+- **Modular** — each tool is an isolated module with shared UX contracts
+- **Maintainable** — TypeScript strict mode, tests, CI, Conventional Commits, semantic-release
+- **Contributor-friendly** — clear docs, issue templates, and a predictable architecture
+
+### Stack
+
+Next.js 15 · React · TypeScript · Tailwind CSS · shadcn/ui · Zustand · Vitest · Playwright
+
+### Quick start
 
 ```bash
 npm install
@@ -18,16 +35,60 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Scripts
+### Scripts
 
-| Command             | Description                  |
-| ------------------- | ---------------------------- |
-| `npm run dev`       | Start the development server |
-| `npm run build`     | Create a production build    |
-| `npm run start`     | Serve the production build   |
-| `npm run lint`      | Run ESLint                   |
-| `npm run typecheck` | Run TypeScript checks        |
+| Command                 | Description                 |
+| ----------------------- | --------------------------- |
+| `npm run dev`           | Development server          |
+| `npm run build`         | Production build            |
+| `npm run lint`          | ESLint                      |
+| `npm run format`        | Prettier                    |
+| `npm run typecheck`     | TypeScript checks           |
+| `npm run test`          | Unit tests                  |
+| `npm run test:coverage` | Unit tests + coverage gates |
+| `npm run test:e2e`      | Playwright smoke tests      |
 
-## License
+### Documentation
 
-MIT
+- [Architecture](./docs/architecture.md)
+- [Adding a tool](./docs/adding-a-tool.md)
+- [Testing](./docs/testing.md)
+- [Roadmap](./docs/roadmap.md)
+- [Contributing](./CONTRIBUTING.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
+- [Security](./SECURITY.md)
+
+### License
+
+MIT © DevToolkit contributors
+
+---
+
+## Español
+
+### ¿Por qué DevToolkit?
+
+DevToolkit es una colección de utilidades para desarrolladores con calidad de producto:
+
+- **Local-first** — las herramientas procesan datos en el navegador
+- **Modular** — cada herramienta es un módulo aislado con contratos UX compartidos
+- **Mantenible** — TypeScript estricto, pruebas, CI, Conventional Commits y semantic-release
+- **Amigable para contribuidores** — docs claras, plantillas de issues y arquitectura predecible
+
+### Inicio rápido
+
+```bash
+npm install
+npm run dev
+```
+
+Abre [http://localhost:3000](http://localhost:3000).
+
+### Documentación
+
+La documentación técnica principal está en inglés para maximizar el alcance internacional.
+La guía de contribución y el roadmap viven en `docs/` y en la raíz del repositorio.
+
+### Licencia
+
+MIT © contribuidores de DevToolkit

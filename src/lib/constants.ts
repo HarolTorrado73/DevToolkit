@@ -3,7 +3,7 @@ export const siteConfig = {
   description:
     "A free, fast, and modern collection of developer tools that run entirely in your browser. Format JSON, decode JWTs, generate UUIDs, and more — with privacy by default.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://devtoolkit.dev",
-  githubUrl: "https://github.com/devtoolkit/devtoolkit",
+  githubUrl: "https://github.com/HarolTorrado73/DevToolkit",
   keywords: [
     "developer tools",
     "json formatter",
