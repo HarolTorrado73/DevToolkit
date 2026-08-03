@@ -6,29 +6,50 @@ import type { ToolDefinition, ToolSummary } from "@/types/tool";
  */
 const tools: readonly ToolDefinition[] = [];
 
+export function toToolSummary(tool: ToolDefinition): ToolSummary {
+  const { load: _load, ...summary } = tool;
+  return summary;
+}
+
+export function toToolSummaries(
+  items: readonly ToolDefinition[],
+): readonly ToolSummary[] {
+  return items.map(toToolSummary);
+}
+
+export function findToolBySlug(
+  items: readonly ToolDefinition[],
+  slug: string,
+): ToolDefinition | undefined {
+  return items.find((tool) => tool.slug === slug);
+}
+
 export function getAllTools(): readonly ToolDefinition[] {
   return tools;
 }
 
 export function getToolSummaries(): readonly ToolSummary[] {
-  return tools.map(({ load: _load, ...summary }) => summary);
+  return toToolSummaries(tools);
 }
 
 export function getToolBySlug(slug: string): ToolDefinition | undefined {
-  return tools.find((tool) => tool.slug === slug);
+  return findToolBySlug(tools, slug);
 }
 
 export function getToolSlugs(): readonly string[] {
   return tools.map((tool) => tool.slug);
 }
 
-export function searchTools(query: string): readonly ToolSummary[] {
+export function filterToolSummaries(
+  items: readonly ToolSummary[],
+  query: string,
+): readonly ToolSummary[] {
   const normalized = query.trim().toLowerCase();
   if (!normalized) {
-    return getToolSummaries();
+    return items;
   }
 
-  return getToolSummaries().filter((tool) => {
+  return items.filter((tool) => {
     const haystack = [
       tool.name,
       tool.description,
@@ -40,4 +61,8 @@ export function searchTools(query: string): readonly ToolSummary[] {
 
     return haystack.includes(normalized);
   });
+}
+
+export function searchTools(query: string): readonly ToolSummary[] {
+  return filterToolSummaries(getToolSummaries(), query);
 }
