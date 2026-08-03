@@ -3,8 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import { SiteShell } from "@/components/layout/site-shell";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { JsonLd } from "@/components/seo/json-ld";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { siteConfig } from "@/lib/constants";
+import { buildWebsiteJsonLd } from "@/lib/seo";
 
 import "./globals.css";
 
@@ -64,6 +66,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground min-h-screen font-sans antialiased`}
       >
+        <JsonLd data={buildWebsiteJsonLd()} />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
