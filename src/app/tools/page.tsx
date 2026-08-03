@@ -10,7 +10,7 @@ export default function ToolsIndexPage() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-6 py-16">
       <h1 className="text-3xl font-semibold tracking-tight">Tools</h1>
-      <p className="mt-3 max-w-2xl text-foreground/75">
+      <p className="text-foreground/75 mt-3 max-w-2xl">
         The tool catalog is being prepared. Individual modules will appear here
         as they ship.
       </p>

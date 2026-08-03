@@ -20,13 +20,13 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Create a production build |
-| `npm run start` | Serve the production build |
-| `npm run lint` | Run ESLint |
-| `npm run typecheck` | Run TypeScript checks |
+| Command             | Description                  |
+| ------------------- | ---------------------------- |
+| `npm run dev`       | Start the development server |
+| `npm run build`     | Create a production build    |
+| `npm run start`     | Serve the production build   |
+| `npm run lint`      | Run ESLint                   |
+| `npm run typecheck` | Run TypeScript checks        |
 
 ## License
 
