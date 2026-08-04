@@ -14,7 +14,7 @@ test.describe("smoke", () => {
     ).toBeVisible();
   });
 
-  test("tools catalog is reachable and searchable", async ({ page }) => {
+  test("tools catalog lists registered modules", async ({ page }) => {
     await page.goto("/tools");
 
     await expect(
@@ -22,8 +22,24 @@ test.describe("smoke", () => {
     ).toBeVisible();
     await expect(page.getByLabel("Search tools")).toBeVisible();
     await expect(
-      page.getByText("No tools registered yet", { exact: false }),
+      page.getByRole("link", { name: /JSON Formatter/i }),
     ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /UUID Generator/i }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /Base64 Encoder/i }),
+    ).toBeVisible();
+  });
+
+  test("json formatter formats sample input", async ({ page }) => {
+    await page.goto("/tools/json-formatter");
+
+    await expect(
+      page.getByRole("heading", { name: "JSON Formatter", level: 1 }),
+    ).toBeVisible();
+    await page.getByRole("button", { name: "Format" }).click();
+    await expect(page.getByText("Formatted JSON.")).toBeVisible();
   });
 
   test("unknown tool slug shows a not-found state", async ({ page }) => {

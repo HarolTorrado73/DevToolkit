@@ -41,19 +41,29 @@ const sampleDefinitions = [
 const sampleTools = toToolSummaries(sampleDefinitions);
 
 describe("tool registry", () => {
-  it("starts with an empty, stable catalog", () => {
-    expect(getAllTools()).toEqual([]);
-    expect(getToolSummaries()).toEqual([]);
-    expect(getToolSlugs()).toEqual([]);
+  it("registers the phase 1 starter tools", () => {
+    const tools = getAllTools();
+    const slugs = getToolSlugs();
+
+    expect(tools.length).toBeGreaterThanOrEqual(3);
+    expect(slugs).toEqual(
+      expect.arrayContaining(["json-formatter", "uuid-generator", "base64"]),
+    );
+    expect(getToolSummaries()).toHaveLength(tools.length);
   });
 
   it("returns undefined for unknown slugs", () => {
     expect(getToolBySlug("does-not-exist")).toBeUndefined();
   });
 
-  it("returns an empty list when searching an empty registry", () => {
-    expect(searchTools("json")).toEqual([]);
-    expect(searchTools("")).toEqual([]);
+  it("finds registered tools by slug and search query", () => {
+    expect(getToolBySlug("json-formatter")?.name).toBe("JSON Formatter");
+    expect(searchTools("uuid")).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ slug: "uuid-generator" }),
+      ]),
+    );
+    expect(searchTools("")).toHaveLength(getToolSummaries().length);
   });
 });
 
