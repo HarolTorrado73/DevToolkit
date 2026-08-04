@@ -11,9 +11,9 @@
 
 ### Phase 1 — First tools
 
-- [ ] JSON Formatter
-- [ ] UUID Generator
-- [ ] Base64 Encoder/Decoder
+- [x] JSON Formatter
+- [x] UUID Generator
+- [x] Base64 Encoder/Decoder
 
 ### Phase 2 — Security & generators
 

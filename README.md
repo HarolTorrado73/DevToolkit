@@ -22,6 +22,12 @@ DevToolkit is a curated collection of everyday developer utilities with a produc
 - **Maintainable** — TypeScript strict mode, tests, CI, Conventional Commits, semantic-release
 - **Contributor-friendly** — clear docs, issue templates, and a predictable architecture
 
+### Available tools (Phase 1)
+
+- [JSON Formatter](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/json-formatter)
+- [UUID Generator](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/uuid-generator)
+- [Base64 Encoder / Decoder](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/base64)
+
 ### Stack
 
 Next.js 15 · React · TypeScript · Tailwind CSS · shadcn/ui · Zustand · Vitest · Playwright
