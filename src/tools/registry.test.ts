@@ -41,13 +41,22 @@ const sampleDefinitions = [
 const sampleTools = toToolSummaries(sampleDefinitions);
 
 describe("tool registry", () => {
-  it("registers the phase 1 starter tools", () => {
+  it("registers phase 1 and phase 2 tools", () => {
     const tools = getAllTools();
     const slugs = getToolSlugs();
 
-    expect(tools.length).toBeGreaterThanOrEqual(3);
+    expect(tools.length).toBeGreaterThanOrEqual(8);
     expect(slugs).toEqual(
-      expect.arrayContaining(["json-formatter", "uuid-generator", "base64"]),
+      expect.arrayContaining([
+        "json-formatter",
+        "uuid-generator",
+        "base64",
+        "password-generator",
+        "hash-generator",
+        "jwt-decoder",
+        "jwt-generator",
+        "timestamp-converter",
+      ]),
     );
     expect(getToolSummaries()).toHaveLength(tools.length);
   });
@@ -58,9 +67,10 @@ describe("tool registry", () => {
 
   it("finds registered tools by slug and search query", () => {
     expect(getToolBySlug("json-formatter")?.name).toBe("JSON Formatter");
-    expect(searchTools("uuid")).toEqual(
+    expect(searchTools("jwt")).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ slug: "uuid-generator" }),
+        expect.objectContaining({ slug: "jwt-decoder" }),
+        expect.objectContaining({ slug: "jwt-generator" }),
       ]),
     );
     expect(searchTools("")).toHaveLength(getToolSummaries().length);

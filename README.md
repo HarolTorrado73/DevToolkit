@@ -22,11 +22,21 @@ DevToolkit is a curated collection of everyday developer utilities with a produc
 - **Maintainable** — TypeScript strict mode, tests, CI, Conventional Commits, semantic-release
 - **Contributor-friendly** — clear docs, issue templates, and a predictable architecture
 
-### Available tools (Phase 1)
+### Available tools
+
+**Phase 1**
 
 - [JSON Formatter](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/json-formatter)
 - [UUID Generator](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/uuid-generator)
 - [Base64 Encoder / Decoder](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/base64)
+
+**Phase 2**
+
+- [Password Generator](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/password-generator)
+- [Hash Generator](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/hash-generator)
+- [JWT Decoder](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/jwt-decoder)
+- [JWT Generator](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/jwt-generator)
+- [Timestamp Converter](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/timestamp-converter)
 
 ### Stack
 

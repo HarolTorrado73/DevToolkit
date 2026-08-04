@@ -1,6 +1,6 @@
 ## Roadmap
 
-### Phase 0 — Foundation (current)
+### Phase 0 — Foundation
 
 - [x] Next.js 15 + TypeScript + Tailwind
 - [x] shadcn/ui, light/dark theme, app shell
@@ -17,11 +17,11 @@
 
 ### Phase 2 — Security & generators
 
-- [ ] Password Generator
-- [ ] Hash Generator
-- [ ] JWT Decoder
-- [ ] JWT Generator
-- [ ] Timestamp Converter
+- [x] Password Generator
+- [x] Hash Generator
+- [x] JWT Decoder
+- [x] JWT Generator
+- [x] Timestamp Converter
 
 ### Phase 3 — Data formatters
 

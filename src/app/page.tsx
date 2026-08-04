@@ -28,14 +28,14 @@ const featuredTools = [
     description: "Pretty-print, minify, and validate JSON payloads.",
   },
   {
-    href: "/tools/uuid-generator",
-    name: "UUID Generator",
-    description: "Create RFC UUID v4 values one at a time or in batches.",
+    href: "/tools/jwt-decoder",
+    name: "JWT Decoder",
+    description: "Inspect JWT headers and claims locally.",
   },
   {
-    href: "/tools/base64",
-    name: "Base64 Encoder / Decoder",
-    description: "Encode and decode UTF-8 text with unicode-safe Base64.",
+    href: "/tools/password-generator",
+    name: "Password Generator",
+    description: "Create strong random passwords in your browser.",
   },
 ] as const;
 

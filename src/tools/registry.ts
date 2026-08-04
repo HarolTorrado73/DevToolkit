@@ -1,5 +1,10 @@
 import { base64Tool } from "@/tools/base64";
+import { hashGeneratorTool } from "@/tools/hash-generator";
 import { jsonFormatterTool } from "@/tools/json-formatter";
+import { jwtDecoderTool } from "@/tools/jwt-decoder";
+import { jwtGeneratorTool } from "@/tools/jwt-generator";
+import { passwordGeneratorTool } from "@/tools/password-generator";
+import { timestampConverterTool } from "@/tools/timestamp-converter";
 import { uuidGeneratorTool } from "@/tools/uuid-generator";
 import type { ToolDefinition, ToolSummary } from "@/types/tool";
 
@@ -11,6 +16,11 @@ const tools: readonly ToolDefinition[] = [
   jsonFormatterTool,
   uuidGeneratorTool,
   base64Tool,
+  passwordGeneratorTool,
+  hashGeneratorTool,
+  jwtDecoderTool,
+  jwtGeneratorTool,
+  timestampConverterTool,
 ];
 
 export function toToolSummary(tool: ToolDefinition): ToolSummary {
