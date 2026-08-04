@@ -1,10 +1,17 @@
+import { base64Tool } from "@/tools/base64";
+import { jsonFormatterTool } from "@/tools/json-formatter";
+import { uuidGeneratorTool } from "@/tools/uuid-generator";
 import type { ToolDefinition, ToolSummary } from "@/types/tool";
 
 /**
  * Central registry of tool modules.
  * Add new tools by importing their definition and appending to `tools`.
  */
-const tools: readonly ToolDefinition[] = [];
+const tools: readonly ToolDefinition[] = [
+  jsonFormatterTool,
+  uuidGeneratorTool,
+  base64Tool,
+];
 
 export function toToolSummary(tool: ToolDefinition): ToolSummary {
   const { load: _load, ...summary } = tool;

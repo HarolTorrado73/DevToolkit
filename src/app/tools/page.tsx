@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { ToolCatalog } from "@/components/tools/tool-catalog";
-import { getToolSummaries } from "@/tools/registry";
 
 export const metadata: Metadata = {
   title: "Tools",
@@ -10,8 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function ToolsIndexPage() {
-  const tools = getToolSummaries();
-
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-col px-4 py-12 sm:px-6">
       <div className="mb-8 max-w-2xl">
@@ -21,7 +18,7 @@ export default function ToolsIndexPage() {
           self-contained module with shared UX, accessibility, and tests.
         </p>
       </div>
-      <ToolCatalog tools={tools} />
+      <ToolCatalog />
     </main>
   );
 }

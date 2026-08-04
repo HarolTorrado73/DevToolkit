@@ -21,6 +21,24 @@ const highlights = [
   },
 ] as const;
 
+const featuredTools = [
+  {
+    href: "/tools/json-formatter",
+    name: "JSON Formatter",
+    description: "Pretty-print, minify, and validate JSON payloads.",
+  },
+  {
+    href: "/tools/uuid-generator",
+    name: "UUID Generator",
+    description: "Create RFC UUID v4 values one at a time or in batches.",
+  },
+  {
+    href: "/tools/base64",
+    name: "Base64 Encoder / Decoder",
+    description: "Encode and decode UTF-8 text with unicode-safe Base64.",
+  },
+] as const;
+
 export default function HomePage() {
   return (
     <main>
@@ -71,6 +89,38 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
+
+        <section aria-labelledby="featured-tools-heading" className="space-y-4">
+          <div className="flex items-end justify-between gap-4">
+            <h2
+              id="featured-tools-heading"
+              className="text-xl font-semibold tracking-tight"
+            >
+              Featured tools
+            </h2>
+            <Link
+              href="/tools"
+              className="text-muted-foreground hover:text-foreground text-sm underline-offset-4 hover:underline"
+            >
+              View all
+            </Link>
+          </div>
+          <ul className="grid gap-4 sm:grid-cols-3">
+            {featuredTools.map((tool) => (
+              <li key={tool.href}>
+                <Link
+                  href={tool.href}
+                  className="border-border/70 bg-card/40 hover:border-border hover:bg-card focus-visible:ring-ring block rounded-xl border p-4 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                >
+                  <h3 className="font-medium tracking-tight">{tool.name}</h3>
+                  <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+                    {tool.description}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       </section>
     </main>
   );

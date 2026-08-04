@@ -9,13 +9,11 @@ import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { useCatalogStore } from "@/stores/catalog-store";
 import { toolCategoryLabels } from "@/tools/categories";
-import { TOOL_CATEGORIES, type ToolSummary } from "@/types/tool";
+import { getToolSummaries } from "@/tools/registry";
+import { TOOL_CATEGORIES } from "@/types/tool";
 
-type ToolCatalogProps = {
-  tools: readonly ToolSummary[];
-};
-
-export function ToolCatalog({ tools }: ToolCatalogProps) {
+export function ToolCatalog() {
+  const tools = getToolSummaries();
   const query = useCatalogStore((state) => state.query);
   const category = useCatalogStore((state) => state.category);
   const setQuery = useCatalogStore((state) => state.setQuery);
