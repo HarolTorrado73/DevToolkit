@@ -25,10 +25,10 @@
 
 ### Phase 3 — Data formatters
 
-- [ ] SQL Formatter
-- [ ] YAML Formatter
-- [ ] XML Formatter
-- [ ] Markdown Preview
+- [x] SQL Formatter
+- [x] YAML Formatter
+- [x] XML Formatter
+- [x] Markdown Preview
 
 ### Phase 4 — Interactive tools
 

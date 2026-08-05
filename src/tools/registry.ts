@@ -3,9 +3,13 @@ import { hashGeneratorTool } from "@/tools/hash-generator";
 import { jsonFormatterTool } from "@/tools/json-formatter";
 import { jwtDecoderTool } from "@/tools/jwt-decoder";
 import { jwtGeneratorTool } from "@/tools/jwt-generator";
+import { markdownPreviewTool } from "@/tools/markdown-preview";
 import { passwordGeneratorTool } from "@/tools/password-generator";
+import { sqlFormatterTool } from "@/tools/sql-formatter";
 import { timestampConverterTool } from "@/tools/timestamp-converter";
 import { uuidGeneratorTool } from "@/tools/uuid-generator";
+import { xmlFormatterTool } from "@/tools/xml-formatter";
+import { yamlFormatterTool } from "@/tools/yaml-formatter";
 import type { ToolDefinition, ToolSummary } from "@/types/tool";
 
 /**
@@ -21,6 +25,10 @@ const tools: readonly ToolDefinition[] = [
   jwtDecoderTool,
   jwtGeneratorTool,
   timestampConverterTool,
+  sqlFormatterTool,
+  yamlFormatterTool,
+  xmlFormatterTool,
+  markdownPreviewTool,
 ];
 
 export function toToolSummary(tool: ToolDefinition): ToolSummary {

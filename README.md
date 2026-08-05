@@ -38,6 +38,13 @@ DevToolkit is a curated collection of everyday developer utilities with a produc
 - [JWT Generator](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/jwt-generator)
 - [Timestamp Converter](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/timestamp-converter)
 
+**Phase 3**
+
+- [SQL Formatter](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/sql-formatter)
+- [YAML Formatter](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/yaml-formatter)
+- [XML Formatter](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/xml-formatter)
+- [Markdown Preview](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/markdown-preview)
+
 ### Stack
 
 Next.js 15 · React · TypeScript · Tailwind CSS · shadcn/ui · Zustand · Vitest · Playwright

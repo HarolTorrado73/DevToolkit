@@ -25,23 +25,21 @@ test.describe("smoke", () => {
       page.getByRole("link", { name: /JSON Formatter/i }),
     ).toBeVisible();
     await expect(
-      page.getByRole("link", { name: /Password Generator/i }),
+      page.getByRole("link", { name: /SQL Formatter/i }),
     ).toBeVisible();
     await expect(
-      page.getByRole("link", { name: /JWT Decoder/i }),
+      page.getByRole("link", { name: /Markdown Preview/i }),
     ).toBeVisible();
   });
 
-  test("password generator creates a password", async ({ page }) => {
-    await page.goto("/tools/password-generator");
+  test("sql formatter formats sample input", async ({ page }) => {
+    await page.goto("/tools/sql-formatter");
 
     await expect(
-      page.getByRole("heading", { name: "Password Generator", level: 1 }),
+      page.getByRole("heading", { name: "SQL Formatter", level: 1 }),
     ).toBeVisible();
-    await page.getByRole("button", { name: "Generate" }).click();
-    await expect(
-      page.getByRole("textbox", { name: "Password" }),
-    ).not.toHaveValue("");
+    await page.getByRole("button", { name: "Format" }).click();
+    await expect(page.getByText("Formatted SQL.")).toBeVisible();
   });
 
   test("json formatter formats sample input", async ({ page }) => {

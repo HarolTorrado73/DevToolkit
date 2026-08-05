@@ -21,3 +21,4 @@ from Conventional Commits on `main`.
 - Project foundation: Next.js 15 app shell, theming, tool registry, CI, and docs.
 - Phase 1 tools: JSON Formatter, UUID Generator, and Base64 Encoder/Decoder.
 - Phase 2 tools: Password Generator, Hash Generator, JWT Decoder, JWT Generator, and Timestamp Converter.
+- Phase 3 tools: SQL Formatter, YAML Formatter, XML Formatter, and Markdown Preview.
