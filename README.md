@@ -45,6 +45,12 @@ DevToolkit is a curated collection of everyday developer utilities with a produc
 - [XML Formatter](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/xml-formatter)
 - [Markdown Preview](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/markdown-preview)
 
+**Phase 4**
+
+- [Regex Tester](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/regex-tester)
+- [Cron Generator](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/cron-generator)
+- [QR Generator](https://github.com/HarolTorrado73/DevToolkit/blob/main/src/tools/qr-generator)
+
 ### Stack
 
 Next.js 15 · React · TypeScript · Tailwind CSS · shadcn/ui · Zustand · Vitest · Playwright

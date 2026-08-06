@@ -1,10 +1,13 @@
 import { base64Tool } from "@/tools/base64";
+import { cronGeneratorTool } from "@/tools/cron-generator";
 import { hashGeneratorTool } from "@/tools/hash-generator";
 import { jsonFormatterTool } from "@/tools/json-formatter";
 import { jwtDecoderTool } from "@/tools/jwt-decoder";
 import { jwtGeneratorTool } from "@/tools/jwt-generator";
 import { markdownPreviewTool } from "@/tools/markdown-preview";
 import { passwordGeneratorTool } from "@/tools/password-generator";
+import { qrGeneratorTool } from "@/tools/qr-generator";
+import { regexTesterTool } from "@/tools/regex-tester";
 import { sqlFormatterTool } from "@/tools/sql-formatter";
 import { timestampConverterTool } from "@/tools/timestamp-converter";
 import { uuidGeneratorTool } from "@/tools/uuid-generator";
@@ -29,6 +32,9 @@ const tools: readonly ToolDefinition[] = [
   yamlFormatterTool,
   xmlFormatterTool,
   markdownPreviewTool,
+  regexTesterTool,
+  cronGeneratorTool,
+  qrGeneratorTool,
 ];
 
 export function toToolSummary(tool: ToolDefinition): ToolSummary {

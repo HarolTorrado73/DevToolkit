@@ -32,9 +32,9 @@
 
 ### Phase 4 — Interactive tools
 
-- [ ] Regex Tester
-- [ ] Cron Generator
-- [ ] QR Generator
+- [x] Regex Tester
+- [x] Cron Generator
+- [x] QR Generator
 
 ### Phase 5 — Growth
 

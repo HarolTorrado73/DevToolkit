@@ -41,11 +41,11 @@ const sampleDefinitions = [
 const sampleTools = toToolSummaries(sampleDefinitions);
 
 describe("tool registry", () => {
-  it("registers phase 1 through phase 3 tools", () => {
+  it("registers phase 1 through phase 4 tools", () => {
     const tools = getAllTools();
     const slugs = getToolSlugs();
 
-    expect(tools.length).toBeGreaterThanOrEqual(12);
+    expect(tools.length).toBeGreaterThanOrEqual(15);
     expect(slugs).toEqual(
       expect.arrayContaining([
         "json-formatter",
@@ -60,6 +60,9 @@ describe("tool registry", () => {
         "yaml-formatter",
         "xml-formatter",
         "markdown-preview",
+        "regex-tester",
+        "cron-generator",
+        "qr-generator",
       ]),
     );
     expect(getToolSummaries()).toHaveLength(tools.length);
@@ -71,9 +74,9 @@ describe("tool registry", () => {
 
   it("finds registered tools by slug and search query", () => {
     expect(getToolBySlug("json-formatter")?.name).toBe("JSON Formatter");
-    expect(searchTools("yaml")).toEqual(
+    expect(searchTools("cron")).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ slug: "yaml-formatter" }),
+        expect.objectContaining({ slug: "cron-generator" }),
       ]),
     );
     expect(searchTools("")).toHaveLength(getToolSummaries().length);

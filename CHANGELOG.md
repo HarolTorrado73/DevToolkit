@@ -24,3 +24,4 @@ from Conventional Commits on `main`.
 - Phase 1 tools: JSON Formatter, UUID Generator, and Base64 Encoder/Decoder.
 - Phase 2 tools: Password Generator, Hash Generator, JWT Decoder, JWT Generator, and Timestamp Converter.
 - Phase 3 tools: SQL Formatter, YAML Formatter, XML Formatter, and Markdown Preview.
+- Phase 4 tools: Regex Tester, Cron Generator, and QR Generator.
